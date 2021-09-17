@@ -9,7 +9,7 @@ const router_1 = __importDefault(require("./routes/router"));
 const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
 const test = 'Workin';
-const server = new server_1.ServerExpress();
+const server = server_1.ServerExpress.instance;
 //Parser of the post data
 server.app.use(express_1.default.urlencoded({ extended: true }));
 server.app.use(express_1.default.json());

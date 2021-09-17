@@ -17,6 +17,9 @@ class ServerExpress {
         this.httpServer = new http_1.default.Server(this.app);
         this.io = new socket_io_1.Server(this.httpServer);
     }
+    static get instance() {
+        return this._instance || (this._instance = new this());
+    }
     listenSockets() {
         console.log('Listen sockets');
         this.io.on('connection', (client) => {
