@@ -1,4 +1,4 @@
-import { Server } from "./classes/server";
+import { ServerExpress } from "./classes/server";
 import { SERVER_PORT } from "./global/environment";
 import router from "./routes/router";
 import express from 'express';
@@ -6,7 +6,7 @@ import cors from 'cors';
 
 const test = 'Workin';
 
-const server = new Server();
+const server = new ServerExpress();
 
 //Parser of the post data
 server.app.use(express.urlencoded({ extended: true }));
